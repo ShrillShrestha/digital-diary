@@ -2,6 +2,7 @@ import { button } from "@aws-amplify/ui";
 import React, {Component} from "react";
 import * as BS from "react-bootstrap";
 import colorDictionary from "../../JS/colorPalette";
+import EntryInfo from "./entryInfo";
 
 class Entry extends React.Component{
 
@@ -27,11 +28,11 @@ class Entry extends React.Component{
 
         let outterContainerStyle  = {
             width: "100vw",
-            height: "104vh",
+            height: "105vh",
             padding: "2% 0 0 0",
             marginTop: "-2%",
             overflow: "hidden",
-            overflowY: "hidden",
+            overflowY: "auto",
             overflowX: "hidden",
             textAlign: "center",
             justifyItems: "center",
@@ -56,6 +57,7 @@ class Entry extends React.Component{
             color: colorPalette.textColor,
             fontSize: "1em",
             width: "20vw",
+            minWidth: "fit-content",
             fontWeight:"bolder"
         }
         
@@ -78,7 +80,33 @@ class Entry extends React.Component{
                     <BS.Col>
                         <div align = "center">
                         <BS.Container fluid style = {innerContainerStyle}>
-                        
+                            <EntryInfo
+                            
+                                entryName = "Today I discovered Monster Hunter Rise!"
+                                entryPreview = "I was looking at some games at the Nintendo EShop and I found this one! You have to hunt monsters to protect your  village and grind them to improve your gear!"
+                                theme = {this.props.theme}
+                            />
+
+                            <EntryInfo
+                            
+                                entryName = "Today I discovered Monster Hunter Rise!"
+                                entryPreview = "I was looking at some games at the Nintendo EShop and I found this one! You have to hunt monsters to protect your  village and grind them to improve your gear!"
+                                theme = {this.props.theme}
+                            />
+
+                            <EntryInfo
+                            
+                                entryName = "Today I discovered Monster Hunter Rise!"
+                                entryPreview = "I was looking at some games at the Nintendo EShop and I found this one! You have to hunt monsters to protect your  village and grind them to improve your gear!"
+                                theme = {this.props.theme}
+                            />
+
+                            <EntryInfo
+                                
+                                entryName = "Today I discovered Monster Hunter Rise!"
+                                entryPreview = "I was looking at some games at the Nintendo EShop and I found this one! You have to hunt monsters to protect your  village and grind them to improve your gear!"
+                                theme = {this.props.theme}
+                            />
                         </BS.Container>
                         </div>
                     </BS.Col>
