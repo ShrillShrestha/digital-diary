@@ -1,0 +1,9 @@
+repository_changes:
+- '*'
+
+component_changes:
+- 'src/Components/*'
+
+javascript_files_changes:
+- 'src/JS/*'
+
