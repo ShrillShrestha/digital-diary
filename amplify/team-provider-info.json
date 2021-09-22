@@ -10,6 +10,11 @@
       "StackName": "amplify-superteam-dev-81909",
       "StackId": "arn:aws:cloudformation:us-east-1:318708150252:stack/amplify-superteam-dev-81909/82be8a70-1ade-11ec-9871-0a8ecd20e60b",
       "AmplifyAppId": "d3vmvaerqm4tc0"
+    },
+    "categories": {
+      "auth": {
+        "superteam32c4a8db": {}
+      }
     }
   },
   "kdev": {
