@@ -2,6 +2,8 @@ import { button } from "@aws-amplify/ui";
 import React, {Component} from "react";
 import * as BS from "react-bootstrap";
 import colorDictionary from "../../JS/colorPalette";
+import CategoryInfo from "./categoryInfo";
+
 class Category extends React.Component{
 
     //.i
@@ -19,10 +21,37 @@ class Category extends React.Component{
         */
     }
 
+    getCategories = () => {
+        /*
+            This function will load all the categories from the DB and create a CategoryInfo per
+            category.
+        */
+        return <div>
+                    <CategoryInfo
+                        categoryName = "Video Games"
+                        categoryDescription = "Talk about games in this section"
+                        imageURL = "https://i.imgur.com/SjXJ5hp.png"
+                        theme = {this.props.theme}
+                        changeToEntry = {this.props.changeToEntry}
+
+                    />
+
+                    <CategoryInfo
+                        categoryName = "Anime"
+                        categoryDescription = "Talk about anime in this section"
+                        imageURL = "https://w7.pngwing.com/pngs/823/892/png-transparent-blue-haired-female-anime-character-myanimelist-imgur-konosuba-manga-aqua-blue-face-cg-artwork-thumbnail.png"
+                        theme = {this.props.theme}
+                        changeToEntry = {this.props.changeToEntry}
+                    />
+                </div>
+    }
 
     render(){
-
+        console.log(this.props.theme)
+        console.log(colorDictionary)
         let colorPalette = colorDictionary[this.props.theme];
+
+        console.log(colorPalette);
 
         let outterContainerStyle  = {
             width: "100vw",
@@ -59,9 +88,6 @@ class Category extends React.Component{
         return(
             <BS.Container fluid style = {outterContainerStyle} >
 
-
-
-
                 <BS.Row>
                     <BS.Col>
                         <div align = "center">
@@ -75,7 +101,7 @@ class Category extends React.Component{
                     <BS.Col>
                         <div align = "center">
                         <BS.Container fluid style = {innerContainerStyle}>
-                        
+                            {this.getCategories()}
                         </BS.Container>
                         </div>
                     </BS.Col>
