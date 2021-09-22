@@ -1,0 +1,15 @@
+.nav_look{
+  width: 40%;
+  justify-content: space-between;
+}
+
+.nav_pad{
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+}
+
+.nav_main{
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+}
