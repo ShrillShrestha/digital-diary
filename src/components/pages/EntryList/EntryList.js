@@ -6,7 +6,10 @@ const EntryList = () => {
   return (
     <div className={styles.main_div}>
       <div className={styles.sub_div}>
-        <div className={styles.title_div}>Entries</div>
+        <div className={styles.title_div}>
+          <span>Entries </span>
+          <Button>Create a new Entry</Button>
+        </div>
         <div className={styles.card_div}>
           {[0, 1, 2, 3, 4].map((i) => {
             return (

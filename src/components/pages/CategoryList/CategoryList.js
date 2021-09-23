@@ -33,7 +33,8 @@ const CategoryList = () => {
     <div className={styles.main_div}>
       <div className={styles.sub_div}>
         <div className={styles.title_div}>
-            Categories
+            <span>Categories </span>
+            <Button>Create a new Category</Button>
         </div>
         <div className={styles.card_cover}>
           {[...getCategories()]}
