@@ -4,6 +4,7 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 
 import {Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EntryNew from './components/pages/Entry/EntryNew';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route exact={true} path='/categories/create'>
           <CreateCategory />
+        </Route>
+        <Route exact path='/entries/create'>
+          <EntryNew />
         </Route>
       </Switch>
     </>

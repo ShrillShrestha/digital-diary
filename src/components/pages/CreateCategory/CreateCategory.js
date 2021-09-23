@@ -22,7 +22,7 @@ const CreateCategory = () => {
           <Form.Label>Category Description</Form.Label>
           <Form.Control as="textarea" rows={7} />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="info" type="submit">
           Submit
         </Button>
       </Form>
