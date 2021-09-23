@@ -1,7 +1,7 @@
 import { button } from "@aws-amplify/ui";
 import React, {Component} from "react";
 import * as BS from "react-bootstrap";
-import colorDictionary from "../../JS/colorPalette";
+import colorDictionary from "../../../JS/colorPalette";
 import CategoryInfo from "./categoryInfo";
 
 class Category extends React.Component{

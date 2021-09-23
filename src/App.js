@@ -4,7 +4,7 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 
 import {Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import EntryNew from './components/pages/Entry/EntryNew';
+import EntryNew from './components/pages/CreateEntry/EntryNew';
 
 function App() {
   return (

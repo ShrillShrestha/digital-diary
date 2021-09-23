@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import * as BS from "react-bootstrap";
-import colorDictionary from "../../JS/colorPalette";
+import colorDictionary from "../../../JS/colorPalette";
 
 class EntryInfo extends React.Component{
 
