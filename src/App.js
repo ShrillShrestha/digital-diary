@@ -1,10 +1,13 @@
-import CreateCategory from './components/pages/CreateCategory/CreateCategory';
-import NavComponent from './components/elements/NavComponent/NavComponent';
 import { withAuthenticator } from '@aws-amplify/ui-react';
-
 import {Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import EntryNew from './components/pages/Entry/EntryNew';
+import NavComponent from './components/elements/NavComponent/NavComponent';
+import CreateCategory from './components/pages/CreateCategory/CreateCategory';
+import EntryNew from './components/pages/CreateEntry/EntryNew';
+import EntryList from './components/pages/EntryList/EntryList';
+import EntryDetail from './components/pages/EntryDetail/EntryDetail'
+import CategoryList from './components/pages/CategoryList/CategoryList'
+
 
 function App() {
   return (
@@ -12,14 +15,21 @@ function App() {
       <NavComponent />
       <Switch>
         <Route exact={true} path='/'>
-          <h1>Personal Diary</h1>
+          <CategoryList />
         </Route>
         <Route exact={true} path='/categories/create'>
           <CreateCategory />
         </Route>
-        <Route exact path='/entries/create'>
+        <Route exact={true} path='/entries'>
+          <EntryList />
+        </Route>
+        <Route exact={true} path='/entries/create'>
           <EntryNew />
         </Route>
+        <Route exact={true} path='/entries/:id'>
+          <EntryDetail />
+        </Route>
+        
       </Switch>
     </>
   );
