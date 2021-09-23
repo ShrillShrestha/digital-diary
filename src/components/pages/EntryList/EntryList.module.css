@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  
 }
 
 .sub_div {
@@ -13,7 +12,6 @@
   height: 65%;
   background-color: grey;
   border-radius: 1rem;
-  overflow-y: scroll;
 }
 
 .title_div {
@@ -31,7 +29,11 @@
   background-color: #f8f0df;
 }
 
+.card_div {
+  height: 90%;
+  overflow-y: scroll;
+}
 .entry_card {
-    padding: 1rem 2rem;
-    margin: 1rem 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem 2rem;
 }
