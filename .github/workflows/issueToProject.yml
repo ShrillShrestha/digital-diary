@@ -17,6 +17,7 @@ jobs:
       enable-versioned-regex: 0
         
   assign_one_project:
+    needs: triage
     runs-on: ubuntu-latest
     name: Assign to Front-End
     steps:
