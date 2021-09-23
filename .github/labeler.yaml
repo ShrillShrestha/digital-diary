@@ -1,10 +1,9 @@
-repository_changes:
-- '*'
-
-component_changes:
-- 'src/Components/*'
-
-javascript_files_changes:
-- 'src/JS/*'
-
-
+version: 1
+labels:
+- label: "S"
+  size-below: 10
+- label: "M"
+  size-above: 9
+  size-below: 100
+- label: "L"
+  size-above: 100
