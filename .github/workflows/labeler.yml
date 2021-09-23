@@ -12,5 +12,4 @@ jobs:
     - name: "Send message to discord server"
       run: |
        curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=There is a new pull request! Check it out 🔥🐋🔥!"
-       END
        
