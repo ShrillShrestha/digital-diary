@@ -12,6 +12,7 @@
   height: 65%;
   background-color: grey;
   border-radius: 1rem;
+  border: 1px solid;
 }
 
 .title_div {

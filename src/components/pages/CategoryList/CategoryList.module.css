@@ -12,6 +12,7 @@
   height: 65%;
   background-color: grey;
   border-radius: 1rem;
+  border: 1px solid;
 }
 
 .cat_form{
@@ -44,7 +45,7 @@
 }
 
 .card_ele{
-  width: 90% !important;
+  width: 95% !important;
   display: flex;
   flex-direction: row !important;
   justify-content: center;
