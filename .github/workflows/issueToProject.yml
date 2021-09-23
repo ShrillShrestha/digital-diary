@@ -20,6 +20,9 @@ jobs:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/1'
         column_name: "To Do 📒"
     - name: Notify Front End issue on discord server
+      if: |
+        contains(github.event.issue.labels.*.name, 'frontend') ||
+        contains(github.event.pull_request.labels.*.name, 'frontend')
       run: |
        curl -s -X POST "${{ secrets.DISCORD_FRONT_END_ISSUE }}" -d "content=Hey! There is a new Front-End Issue🎨! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/1"
          
@@ -33,6 +36,9 @@ jobs:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/2'
         column_name: "To Do 📒"
     - name: Notify Back End issue on discord server
+      if: |
+        contains(github.event.issue.labels.*.name, 'backend') ||
+        contains(github.event.pull_request.labels.*.name, 'backend')
       run: |
        curl -s -X POST "${{ secrets.DISCORD_BACK_END_ISSUE }}" -d "content= Looks like we need to do some BE changes 💻💾! Check it at the BE Project! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/2"
         
@@ -45,6 +51,9 @@ jobs:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/3'
         column_name: "To Do 📒"
     - name: Notify Documentation issue on discord server
+      if: |
+        contains(github.event.issue.labels.*.name, 'documentation') ||
+        contains(github.event.pull_request.labels.*.name, 'documentation')
       run: |
        curl -s -X POST "${{ secrets.DISCORD_PROJECT_PLANNING_ISSUE }}" -d "content= Wow! Looks like there are some changes into the documentation of the project📝! Check it at the Project Planning Project! https://github.com/ShrillShrestha/digital-diary/projects/3"
      
@@ -57,6 +66,9 @@ jobs:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/4'
         column_name: "Wishlist 🎅"
     - name: Notify that someone has a new wish on discord server
+      if: |
+        contains(github.event.issue.labels.*.name, 'wishlist') ||
+        contains(github.event.pull_request.labels.*.name, 'wishlist'
       run: |
        curl -s -X POST "${{ secrets.DISCORD_WISHLIST_ISSUE }}" -d "content=Could this be a wish that will come true ✨ ? Check it at the wishlist Project! https://github.com/ShrillShrestha/digital-diary/projects/4"
   
