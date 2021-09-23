@@ -70,5 +70,5 @@ jobs:
         contains(github.event.issue.labels.*.name, 'wishlist') ||
         contains(github.event.pull_request.labels.*.name, 'wishlist')
       run: |
-       curl -s -X POST "${{ secrets.DISCORD_WISHLIST_ISSUE }}" -d "content=Could ${{github.event.issue.name}} be a wish that will come true ✨ ? Check it at the wishlist Project! https://github.com/ShrillShrestha/digital-diary/projects/4"
+       curl -s -X POST "${{ secrets.DISCORD_WISHLIST_ISSUE }}" -d "content=Could ${{github.event.issue}} be a wish that will come true ✨ ? Check it at the wishlist Project! https://github.com/ShrillShrestha/digital-diary/projects/4"
   
