@@ -1,0 +1,58 @@
+name: Auto Assign to Project(s)
+
+on:
+  issues:
+    types: [opened, labeled]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  assign_one_project:
+    runs-on: ubuntu-latest
+    name: Assign to Front-End
+    steps:
+    - name: Assign issues with `frontend` label to Front-End Project
+      uses: srggrs/assign-one-project-github-action@1.2.1
+      if: |
+        contains(github.event.issue.labels.*.name, 'frontend') ||
+        contains(github.event.pull_request.labels.*.name, 'frontend')
+      with:
+        project: 'https://github.com/ShrillShrestha/digital-diary/projects/1'
+        column_name: "To Do 📒"
+      run: |
+       curl -s -X POST "${{ secrets.DISCORD_FRONT_END_ISSUE }}" -d "content=Hey! There is a new Front-End Issue🎨! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/1"
+         
+
+    - name: Assign issues with `backend` label to Back-End Project
+      uses: srggrs/assign-one-project-github-action@1.2.1
+      if: |
+        contains(github.event.issue.labels.*.name, 'backend') ||
+        contains(github.event.pull_request.labels.*.name, 'backend')
+      with:
+        project: 'https://github.com/ShrillShrestha/digital-diary/projects/2'
+        column_name: "To Do 📒"
+      run: |
+       curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content= Looks like we need to do some BE changes 💻💾! Check it at the BE Project! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/2 "
+        
+   - name: Assign issues with `documentation` label to Project Planning Project
+      uses: srggrs/assign-one-project-github-action@1.2.1
+      if: |
+        contains(github.event.issue.labels.*.name, 'documentation') ||
+        contains(github.event.pull_request.labels.*.name, 'documentation')
+      with:
+        project: 'https://github.com/ShrillShrestha/digital-diary/projects/3'
+        column_name: "To Do 📒"
+      run: |
+       curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content= Wow! Looks like there are some changes into the documentation of the project📝! Check it at the Project Planning Project! https://github.com/ShrillShrestha/digital-diary/projects/3"
+     
+   - name: Assign issues with `wishlist` label to Project Planning Project
+      uses: srggrs/assign-one-project-github-action@1.2.1
+      if: |
+        contains(github.event.issue.labels.*.name, 'wishlist') ||
+        contains(github.event.pull_request.labels.*.name, 'wishlist')
+      with:
+        project: 'https://github.com/ShrillShrestha/digital-diary/projects/4'
+        column_name: "Wishlist 🎅"
+      run: |
+       curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=Could this be a wish that will come true ✨ ? Check it at the wishlist Project! https://github.com/ShrillShrestha/digital-diary/projects/4"
+  
