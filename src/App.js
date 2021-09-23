@@ -5,7 +5,7 @@ import NavComponent from './components/elements/NavComponent/NavComponent';
 import CreateCategory from './components/pages/CreateCategory/CreateCategory';
 import EntryNew from './components/pages/CreateEntry/EntryNew';
 import EntryList from './components/pages/EntryList/EntryList';
-
+import CategoryList from './components/pages/CategoryList/CategoryList'
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <NavComponent />
       <Switch>
         <Route exact={true} path='/'>
-          <h1>Personal Diary</h1>
+          <CategoryList />
         </Route>
         <Route exact={true} path='/categories/create'>
           <CreateCategory />
