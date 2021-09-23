@@ -19,6 +19,7 @@ jobs:
       with:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/1'
         column_name: "To Do 📒"
+    - name: Notify Front End issue on discord server
       run: |
        curl -s -X POST "${{ secrets.DISCORD_FRONT_END_ISSUE }}" -d "content=Hey! There is a new Front-End Issue🎨! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/1"
          
@@ -31,10 +32,11 @@ jobs:
       with:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/2'
         column_name: "To Do 📒"
+    - name: Notify Back End issue on discord server
       run: |
-       curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content= Looks like we need to do some BE changes 💻💾! Check it at the BE Project! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/2 "
+       curl -s -X POST "${{ secrets.DISCORD_BACK_END_ISSUE }}" -d "content= Looks like we need to do some BE changes 💻💾! Check it at the BE Project! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/2"
         
-   - name: Assign issues with `documentation` label to Project Planning Project
+    - name: Assign issues with `documentation` label to Project Planning Project
       uses: srggrs/assign-one-project-github-action@1.2.1
       if: |
         contains(github.event.issue.labels.*.name, 'documentation') ||
@@ -42,10 +44,11 @@ jobs:
       with:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/3'
         column_name: "To Do 📒"
+    - name: Notify Documentation issue on discord server
       run: |
        curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content= Wow! Looks like there are some changes into the documentation of the project📝! Check it at the Project Planning Project! https://github.com/ShrillShrestha/digital-diary/projects/3"
      
-   - name: Assign issues with `wishlist` label to Project Planning Project
+    - name: Assign issues with `wishlist` label to Project Planning Project
       uses: srggrs/assign-one-project-github-action@1.2.1
       if: |
         contains(github.event.issue.labels.*.name, 'wishlist') ||
@@ -53,6 +56,7 @@ jobs:
       with:
         project: 'https://github.com/ShrillShrestha/digital-diary/projects/4'
         column_name: "Wishlist 🎅"
+    - name: Notify that someone has a new wish on discord server
       run: |
        curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=Could this be a wish that will come true ✨ ? Check it at the wishlist Project! https://github.com/ShrillShrestha/digital-diary/projects/4"
   
