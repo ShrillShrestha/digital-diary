@@ -46,7 +46,7 @@ jobs:
         column_name: "To Do 📒"
     - name: Notify Documentation issue on discord server
       run: |
-       curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content= Wow! Looks like there are some changes into the documentation of the project📝! Check it at the Project Planning Project! https://github.com/ShrillShrestha/digital-diary/projects/3"
+       curl -s -X POST "${{ secrets.DISCORD_PROJECT_PLANNING_ISSUE }}" -d "content= Wow! Looks like there are some changes into the documentation of the project📝! Check it at the Project Planning Project! https://github.com/ShrillShrestha/digital-diary/projects/3"
      
     - name: Assign issues with `wishlist` label to Project Planning Project
       uses: srggrs/assign-one-project-github-action@1.2.1
@@ -58,5 +58,5 @@ jobs:
         column_name: "Wishlist 🎅"
     - name: Notify that someone has a new wish on discord server
       run: |
-       curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=Could this be a wish that will come true ✨ ? Check it at the wishlist Project! https://github.com/ShrillShrestha/digital-diary/projects/4"
+       curl -s -X POST "${{ secrets.DISCORD_WISHLIST_ISSUE }}" -d "content=Could this be a wish that will come true ✨ ? Check it at the wishlist Project! https://github.com/ShrillShrestha/digital-diary/projects/4"
   
