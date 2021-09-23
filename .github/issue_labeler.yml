@@ -1,0 +1,15 @@
+# Add/remove 'wishlist' label if issue contains the word 'WISH'
+wishlist:
+    - 'WISH'
+    
+# Add/remove 'frontend' label if issue contains the word 'FE' 'FRONT-END','fe', "front-end","FRONTEND", "frontend"
+frontend:
+    - '(FE|fe|front-end|FRONTEND|frontend)'
+
+# Add/remove 'backend' label if issue contains the word 'BE' 'BACK-END','be', "back-end","BACKEND", "backend"
+backend:
+    - '(BE|be|back-end|BACKEND|backend)'
+
+# Add/remove "documentation" label if issue contains the word "doc", "documentation"
+documentation:
+    - '(doc|documentation)'
