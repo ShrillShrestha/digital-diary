@@ -20,11 +20,9 @@ const EntryNew = () => {
               <Form.Label>Entry Content</Form.Label>
               <Form.Control as="textarea" rows={7} />
             </Form.Group>
-            <div className="text-center">
-              <Button variant="info" size="lg" type="submit">
-                Submit
-              </Button>
-            </div>
+            <Button variant="info" type="submit">
+              Submit
+            </Button>
           </Form>
         </div>
       </div>
