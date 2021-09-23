@@ -31,7 +31,10 @@
 }
 
 .card_div {
+  display: flex;
   height: 90%;
+  flex-direction: column;
+  align-items: center;
   overflow-y: scroll;
 }
 .entry_card {

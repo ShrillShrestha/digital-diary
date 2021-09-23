@@ -1,0 +1,18 @@
+type Category @model {
+  id: ID!
+  name: String!
+  description: String!
+  imageUrl: String!
+  entries: [Entry] @connection(keyName: "byCategory", fields: ["id"])
+}
+
+type Entry @model
+  @auth(rules: [{ allow: owner }])
+  @key(name: "byCategory", fields: ["categoryID"], queryField: "entriesByCategory")
+ {
+  id: ID!
+  categoryID: ID!
+  title: String!
+  content: String!  
+}
+

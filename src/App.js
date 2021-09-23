@@ -20,15 +20,16 @@ function App() {
         <Route exact={true} path='/categories/create'>
           <CreateCategory />
         </Route>
-        <Route exact={true} path='/entries'>
-          <EntryList />
-        </Route>
-        <Route exact={true} path='/entries/create'>
+        <Route exact={true} path='/:id/entries/create'>
           <EntryNew />
         </Route>
-        <Route exact={true} path='/entries/:id'>
+        <Route exact={true} path='/:cid/entries/:id'>
           <EntryDetail />
         </Route>
+        <Route exact={true} path='/:id/entries'>
+          <EntryList />
+        </Route>
+        
         
       </Switch>
     </>

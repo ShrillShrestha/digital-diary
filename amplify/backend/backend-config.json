@@ -46,5 +46,22 @@
         ]
       }
     }
+  },
+  "api": {
+    "digitalDiaryAPI": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authsuperteam6a218066"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
   }
 }

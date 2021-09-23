@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./EntryDetail.module.css";
 
-const EntryDetail = () => {
+const EntryDetail = ( props ) => {
+  console.log("props", props.fromDashboard)
   return (
     <div className={` ${styles.main}`}>
       <div className={styles.title}>
