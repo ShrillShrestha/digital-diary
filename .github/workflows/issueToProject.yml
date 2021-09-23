@@ -40,7 +40,7 @@ jobs:
         contains(github.event.issue.labels.*.name, 'backend') ||
         contains(github.event.pull_request.labels.*.name, 'backend')
       run: |
-       curl -s -X POST "${{ secrets.DISCORD_BACK_END_ISSUE }}" -d "content= Looks like we need to do some BE changes: ${{github.event.issue.title}} 💻💾! Check it at the BE Project! Check it at the FE Project! https://github.com/ShrillShrestha/digital-diary/projects/2"
+       curl -s -X POST "${{ secrets.DISCORD_BACK_END_ISSUE }}" -d "content= Looks like we need to do some BE changes: ${{github.event.issue.title}} 💻💾! Check it at the BE Project! https://github.com/ShrillShrestha/digital-diary/projects/2"
         
     - name: Assign issues with `documentation` label to Project Planning Project
       uses: srggrs/assign-one-project-github-action@1.2.1
