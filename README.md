@@ -27,19 +27,19 @@
 ## Bots
 #### The server contains five unique pokemon bots with their unique personality (or at least an attemp of giving them their own personality). Those are:
 - **Mudkip Bot**
-Notifies you about a new pull request
+Notifies you about a new pull request<br>
 ![Image of new pull request notification](https://i.imgur.com/Kp9XfVB.png)
 - **Chikorita Bot**
-Notifies you about a new Front-End Issue!
+Notifies you about a new Front-End Issue!<br>
 ![Image of new new FrontEnd Issue notification](https://i.imgur.com/1829hnd.png)
 - **Torchic Bot**
-Notifies you about a new Back-End Issue!
+Notifies you about a new Back-End Issue!<br>
 ![Image of new new BackEnd Issue notification](https://i.imgur.com/K3fEta8.png)
 - **Totodile Bot**
-Notifies you about a new Documentation Issue!
+Notifies you about a new Documentation Issue!<br>
 ![Image of new new Documentation Issue notification](https://i.imgur.com/baYglNB.png)
 - **Jirachi Bot**
-Notifies you about a new Wishlist Issue!
+Notifies you about a new Wishlist Issue!<br>
 ![Image of new new Wishlist Issue notification](https://i.imgur.com/fnNxS5J.png)
 
 _They work thanks to Github Actions!_
