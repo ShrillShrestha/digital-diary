@@ -24,7 +24,7 @@ const CreateCategory = () => {
       await API.graphql(graphqlOperation(createCategory, {
         input: category
       }))
-      history.push("/");
+      history.push("/categories");
     } catch(error) {
       console.log(error)
     }

@@ -61,7 +61,7 @@ const EntryNew = () => {
                 }
               />
             </Form.Group>
-            <div className="text-center">
+            <div>
               <Button variant="info" size="lg" type="submit">
                 Submit
               </Button>

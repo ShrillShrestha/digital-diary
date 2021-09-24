@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Homepage from './components/pages/HomePage/HomePage';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
@@ -15,7 +16,15 @@ ReactDOM.render(
   
   <React.StrictMode>
     <Router>
-      <App />
+      <Switch>
+        <Route exact={true} path= "/">
+          <Homepage />
+        </Route>
+        <Route path="/">
+          <App />
+        </Route>
+      </Switch>
+      
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

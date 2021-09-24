@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 import styles from "./EntryList.module.css";
-import { API } from "aws-amplify";
+import { API, Auth } from "aws-amplify";
 import { entriesByCategory } from "../../../graphql/queries";
 import { Link, useParams } from "react-router-dom";
-import { Auth } from "aws-amplify";
 import { BiEdit } from 'react-icons/bi';
 import { MdDelete } from 'react-icons/md';
 import * as mutations from '../../../graphql/mutations';
@@ -13,6 +12,7 @@ const EntryList = () => {
   const { id } = useParams();
 
   const [entries, setEntries] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchEntriesByCategory = async () => {
     let user = await Auth.currentAuthenticatedUser();
@@ -27,6 +27,7 @@ const EntryList = () => {
       });
       const entryList = entriesData.data.entriesByCategory.items;
       setEntries(entryList);
+      setLoading(false);
     } catch (err) {
       console.log("err", err);
     }
@@ -46,6 +47,8 @@ const EntryList = () => {
       query: mutations.deleteEntry,
       variables: { input: entryDetails },
     });
+    
+    await fetchEntriesByCategory();
   };
 
 
@@ -59,6 +62,8 @@ const EntryList = () => {
           </Link>
         </div>
         <div className={styles.card_div}>
+          {!loading ?
+          <>
           {entries.length !== 0 ? (
             entries.map((entry) => {
               return (
@@ -87,7 +92,7 @@ const EntryList = () => {
             })
           ) : (
             <h1 style={{ color: "#fff" }}>No entries, create</h1>
-          )}
+          )} </> : " " }
         </div>
       </div>
     </div>

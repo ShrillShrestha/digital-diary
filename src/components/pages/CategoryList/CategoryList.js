@@ -10,14 +10,15 @@ import * as mutations from '../../../graphql/mutations';
 
 const CategoryList = () => {
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getCategories = async () => {
     const catData = await API.graphql({
       query: listCategories,
     });
     const catList = catData.data.listCategories.items;
-    console.log("categories", catList);
     setCategories(catList);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -36,6 +37,7 @@ const CategoryList = () => {
       query: mutations.deleteCategory,
       variables: { input: catDetails },
     });
+    await getCategories();
   };
 
   return (
@@ -48,40 +50,43 @@ const CategoryList = () => {
           </Link>
         </div>
         <div className={styles.card_cover}>
-          {categories.length !== 0 ? (
-            categories.map((cat) => {
-              return (
-                <Card
-                  className={styles.card_ele}
-                  style={{ width: "18rem" }}
-                  key={cat.id}
-                >
-                  <Card.Img
-                    className={styles.img_len}
-                    variant="top"
-                    src={cat.imageUrl}
-                  />
-                  <Card.Body>
-                    <Card.Title>{cat.name}</Card.Title>
-                    <Card.Text>{cat.description}</Card.Text>
-                    <Link to={`/${cat.id}/entries`} className="btn btn-primary">
-                      View Entries
-                    </Link>
-                    <div className={styles.footer_icons}>
-                      <BiEdit
-                        color="green"
-                        size="25px"
-                        className={styles.edit_icon}
-                      />
-                      <MdDelete color="red" size="25px" onClick={() => deleteCategory(cat.id)}/>
-                    </div>
-                  </Card.Body>
-                </Card>
-              );
-            })
-          ) : (
-            <h1 style={{ color: "#fff" }}>No categories, create</h1>
-          )}
+          {!loading ?
+          <>
+            {categories.length !== 0 ? (
+              categories.map((cat) => {
+                return (
+                  <Card
+                    className={styles.card_ele}
+                    style={{ width: "18rem" }}
+                    key={cat.id}
+                  >
+                    <Card.Img
+                      className={styles.img_len}
+                      variant="top"
+                      src={cat.imageUrl}
+                    />
+                    <Card.Body>
+                      <Card.Title>{cat.name}</Card.Title>
+                      <Card.Text>{cat.description}</Card.Text>
+                      <Link to={`/${cat.id}/entries`} className="btn btn-primary">
+                        View Entries
+                      </Link>
+                      <div className={styles.footer_icons}>
+                        <BiEdit
+                          color="green"
+                          size="25px"
+                          className={styles.edit_icon}
+                        />
+                        <MdDelete color="red" size="25px" onClick={() => deleteCategory(cat.id)}/>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                );
+              })
+            ) : (
+              <h1 style={{ color: "#fff" }}>No categories, create</h1>
+            )}
+          </> : " " }
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import EntryNew from './components/pages/CreateEntry/EntryNew';
 import EntryList from './components/pages/EntryList/EntryList';
 import EntryDetail from './components/pages/EntryDetail/EntryDetail'
 import CategoryList from './components/pages/CategoryList/CategoryList'
+import ErrorPage from './components/pages/ErrorPage/ErrorPage';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <>
       <NavComponent />
       <Switch>
-        <Route exact={true} path='/'>
+        <Route exact={true} path='/categories'>
           <CategoryList />
         </Route>
         <Route exact={true} path='/categories/create'>
@@ -29,8 +30,12 @@ function App() {
         <Route exact={true} path='/:id/entries'>
           <EntryList />
         </Route>
-        
-        
+        <Route exact={true} path='/:id/entries'>
+          <EntryList />
+        </Route>
+        <Route path='/'>
+          <ErrorPage />
+        </Route>
       </Switch>
     </>
   );
