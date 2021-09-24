@@ -115,6 +115,7 @@ _They work thanks to Github Actions!_
 - GraphQL
 - DynamoDB
 - React Bootstrap
+- GitHub Actions
 
 ## Prerequisites
 - Node.js v12.x or later
