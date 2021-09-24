@@ -26,20 +26,15 @@
 
 ## Bots
 #### The server contains five unique pokemon bots with their unique personality (or at least an attemp of giving them their own personality). Those are:
-- **Mudkip Bot**
-Notifies you about a new pull request<br>
+- **Mudkip Bot:** Notifies you about a new pull request<br>
 ![Image of new pull request notification](https://i.imgur.com/Kp9XfVB.png)
-- **Chikorita Bot**
-Notifies you about a new Front-End Issue!<br>
+- **Chikorita Bot:** Notifies you about a new Front-End Issue!<br>
 ![Image of new new FrontEnd Issue notification](https://i.imgur.com/1829hnd.png)
-- **Torchic Bot**
-Notifies you about a new Back-End Issue!<br>
+- **Torchic Bot:** Notifies you about a new Back-End Issue!<br>
 ![Image of new new BackEnd Issue notification](https://i.imgur.com/K3fEta8.png)
-- **Totodile Bot**
-Notifies you about a new Documentation Issue!<br>
+- **Totodile Bot:** Notifies you about a new Documentation Issue!<br>
 ![Image of new new Documentation Issue notification](https://i.imgur.com/baYglNB.png)
-- **Jirachi Bot**
-Notifies you about a new Wishlist Issue!<br>
+- **Jirachi Bot:** Notifies you about a new Wishlist Issue!<br>
 ![Image of new new Wishlist Issue notification](https://i.imgur.com/fnNxS5J.png)
 
 _They work thanks to Github Actions!_
@@ -87,16 +82,32 @@ _They work thanks to Github Actions!_
 <p align = "center"><img src = "https://media.discordapp.net/attachments/889598080771584020/889930380981973023/unknown.png"/></p>
 
 ## UI Design
-<h3 align = "center">Category List</h3>
-<p align = "center"> <img src = "https://i.imgur.com/r0j7fZm.png"/> </p>
-<h3 align = "center">Create a new category</h3>
-<p align = "center"> <img src = "https://i.imgur.com/yQ23JkE.png"/> </p>
-<h3 align = "center">Entry List</h3>
-<p align = "center"> <img src = "https://i.imgur.com/P2JMKNr.png"/> </p>
-<h3 align = "center">Create a new Entry</h3>
-<p align = "center"> <img src = "https://i.imgur.com/QtWv4NT.png"/> </p>
-<h3 align = "center">Entry Details</h3>
-<p align = "center"> <img src = "https://i.imgur.com/oWxK29i.png"/> </p>
+ - Landing Page <br>
+![landing_page](https://user-images.githubusercontent.com/43284212/134714105-2ff3b78f-306d-4d3f-bf72-d950bd7a5959.png)
+
+- Sign In Page <br>
+![signIn](https://user-images.githubusercontent.com/43284212/134714497-153d577e-e3bb-4629-b721-182bf4d04906.png)
+
+- Sign Up Page <br>
+![signup](https://user-images.githubusercontent.com/43284212/134714559-72e36f76-7bd1-445b-9934-8f2d1591b99c.png)
+
+- Categories List <br>
+![categoriesList](https://user-images.githubusercontent.com/43284212/134714614-f4c89da3-681b-467e-a957-976a6321968d.png)
+
+- Create Category Form <br>
+![createCategory](https://user-images.githubusercontent.com/43284212/134714821-b282d8fe-63a7-489d-a501-4c72f3601d86.png)
+
+- Entry List Page <br>
+![entriesList](https://user-images.githubusercontent.com/43284212/134714914-31cadfbb-6e3a-4a82-931a-3e36071b0e45.png)
+
+- Entry Detail Page <br>
+![entry_detail](https://user-images.githubusercontent.com/43284212/134715002-6951a714-a03e-4985-b5a4-6e622f6c25b2.png)
+
+- Create Entry Page <br>
+![creatEntry](https://user-images.githubusercontent.com/43284212/134715093-8010de33-2a94-4bd0-9da0-f636ea4e3867.png)
+
+- Error Page <br>
+![error](https://user-images.githubusercontent.com/43284212/134715152-015b871d-159a-49fe-8eb2-09a9fed422ed.png)
 
 ## Technologies Used
 - React
