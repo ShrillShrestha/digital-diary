@@ -135,7 +135,7 @@ _They work thanks to Github Actions!_
   - Select your preference of sign in method
   - Select _No, I am done_ when prompt to configure advance settings
 - Run `amplify add api`
-  - Select `Graphql`
+  - Select `GraphQL`
   - Provide your name for the api
   - Choose _Amazone Cognito User Pool_ for authorization type
   - If asked to configure advance setting, select _no_
