@@ -8,11 +8,18 @@
 }
 
 .sub_div{
-  width: 70%;
+  width: 40%;
   height: 65%;
-  background-color: grey;
   border-radius: 1rem;
   border: 1px solid;
+}
+
+.landing_div {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cat_form{
@@ -27,7 +34,7 @@
   height: 10%;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-size: x-large;
   padding-top: .5em;
   padding-bottom: .5em;
@@ -36,6 +43,9 @@
   background-color: #F8F0DF;
 }
 
+.landing_img {
+  margin-bottom: 2rem;
+}
 .card_cover{
   display: flex;
   height: 90%;
