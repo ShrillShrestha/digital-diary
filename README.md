@@ -87,8 +87,10 @@ _They work thanks to Github Actions!_
 <p align = "center"><img src = "https://media.discordapp.net/attachments/889598080771584020/889930380981973023/unknown.png"/></p>
 
 ## UI Design
+<h3 align = "center">Landing Page</h3>
+<p align = "center"> <img src = "https://imgur.com/AJzt4Kn.png"/> </p>
 <h3 align = "center">Category List</h3>
-<p align = "center"> <img src = "https://i.imgur.com/r0j7fZm.png"/> </p>
+<p align = "center"> <img src = "https://imgur.com/1GsLlsn.png"/> </p>
 <h3 align = "center">Create a new category</h3>
 <p align = "center"> <img src = "https://i.imgur.com/yQ23JkE.png"/> </p>
 <h3 align = "center">Entry List</h3>
