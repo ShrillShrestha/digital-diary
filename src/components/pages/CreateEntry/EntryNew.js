@@ -33,6 +33,11 @@ const EntryNew = () => {
     }
   };
 
+  const cancelAdd = () => {
+    history.push(`/${id}/entries`);
+  }
+
+
   return (
     <div className={styles.main_div}>
       <div className={styles.sub_div}>
@@ -61,11 +66,13 @@ const EntryNew = () => {
                 }
               />
             </Form.Group>
-            <div className="text-center">
-              <Button variant="info" size="lg" type="submit">
-                Submit
-              </Button>
-            </div>
+            <div className={styles.btn_div}>
+            <Button variant="danger" onClick={cancelAdd}>Cancel</Button>
+            <Button variant="info" type="submit">
+              Submit
+            </Button>
+          </div>
+
           </Form>
         </div>
       </div>
