@@ -1,27 +1,21 @@
 import React from "react";
 import styles from "./EntryDetail.module.css";
+import { useLocation } from "react-router";
 
-const EntryDetail = ( props ) => {
-  console.log("props", props.fromDashboard)
+const EntryDetail = () => {
+  const location = useLocation();
+  const {entry} = location.state;
+  console.log(entry);
   return (
-    <div className={` ${styles.main}`}>
-      <div className={styles.title}>
-        <h1>Title</h1>
-      </div>
-      <div className={styles.content}>
-        <p >Created by: Superteam</p>
-        <p>Created at: { new Date().toISOString()}</p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum
-        </p>
+    <div className={styles.main}>
+      <div className={styles.sub_div}>
+        <div className={styles.title_div}>
+          <span>{entry.title}</span>
+          <span>Created at: { new Date(entry.createdAt).toLocaleString() }</span>
+        </div>
+        <div className={styles.content}>
+          {entry.content}
+        </div>
       </div>
     </div>
   );

@@ -18,8 +18,7 @@ const NavComponent = () => {
           Digital Diary
         </Navbar.Brand>
         <Nav className={`d-flex ${styles.nav_look}`}>
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/categories">Categories</Nav.Link>
+          <Nav.Link href="/">Categories</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
           <AmplifySignOut />
         </Nav>

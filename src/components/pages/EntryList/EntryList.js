@@ -23,7 +23,6 @@ const EntryList = () => {
         },
       });
       const entryList = entriesData.data.entriesByCategory.items;
-      console.log("entry list", entryList);
       setEntries(entryList);
     } catch (err) {
       console.log("err", err);
@@ -48,11 +47,11 @@ const EntryList = () => {
                 <Card className={styles.entry_card} key={entry.id}>
                 <Card.Body>
                   <Card.Title>{entry.title}</Card.Title>
-                  <Card.Text>
+                  <Card.Text className={styles.truncate}>
                     {entry.content}
                   </Card.Text>
                   {/* <Link to={`/${id}/entries/${entry.id}`}>View Entries</Link> */}
-                  <Link to={{pathname:`/${id}/entries/${entry.id}`, fromDashboard: entry }}>View Entry</Link>
+                  <Link to={{pathname:`/${id}/entries/${entry.id}`, state: {entry} }}>View Entry</Link>
                 </Card.Body>
               </Card>
               )
