@@ -1,3 +1,90 @@
+<h1 align = "center"> Welcome to Digital Diary </h1>
+
+<p align = "center"> <img src = "https://64.media.tumblr.com/8ede0a31deaf6c972d874a6aa3caaf35/tumblr_my8p5nLuJ11rov8qno1_400.gifv"/> </p>
+<h3 align = "center"> 
+  Have you ever wanted a personal space on the web to write your personal thought between different categories?
+  <br> <br>
+  No? 
+  <br><br>
+  Okay, now you do! 
+  <br><br>
+  Digital diary is the best online diary that you never asked for! Help us build a great open source application by contributing to this app! 
+  
+  <br><br>
+
+  If you want to contribute to our great online diary you should read through all this document!
+  
+  <h1 align = "center"> Join the discord server to monitor the repo! </h1>
+  <p align = "center"><a href = https://discord.gg/QRHnpuVP4t> <img src = "http://www.unioncosmos.com/wp-content/uploads/2018/12/Uni%C3%B3n-Cosmos-Discord-Logo-Animado.gif"/></a></p> 
+  <h6 align = "center"> Click the image to join the server </h6>
+<h3 align = "center"> 
+   Yup! That's right, we've got our own personal discord server >:) and it allows us to monitor the repo! Bwahahah. 
+  <br>
+  Okay, time to get serious. Let me talk to you about the server:
+  <h2> Rules </h2><br>
+  <h4>
+  - Do not spam the channels<br>
+  - Do not send messages on any channel where the Pokebots send notifications unless completely necesarry. Remember that the main focus of that server is monitoring updates!
+  </h4>
+  <h2> Bots </h2><br>
+  <h4> The server contains five unique pokemon bots with their unique personality (or at least an attemp of giving them their own personality).
+    Those are:
+  </h4>
+  <b> Mudkip Bot </b>: Notifies you about a new pull request</h4>
+<img src = "https://i.imgur.com/Kp9XfVB.png"/> 
+  
+  <b> Chikorita Bot </b>: Notifies you about a new Front-End Issue!</h4>
+<img src = "https://i.imgur.com/1829hnd.png"/> 
+
+ <b> Torchic Bot </b>: Notifies you about a new Back-End Issue!</h4>
+<img src = "https://i.imgur.com/K3fEta8.png"/> 
+
+ <b> Totodile Bot </b>: Notifies you about a new Documentation Issue!</h4>
+<img src = "https://i.imgur.com/baYglNB.png"/> 
+
+ <b> Jirachi Bot </b>: Notifies you about a new Wishlist Issue!</h4>
+<img src = "https://i.imgur.com/fnNxS5J.png"/> 
+
+They work thanks to Github Actions!
+
+<h1 align = "center"> Contributing to the repository </h1>
+<p align = "center"> <img src = "https://raw.githubusercontent.com/aomineDev/aomineDev/master/assets/github.gif"/> </p>
+<h2> Creating an Issue </h2>
+When creating an issue it is important that you add the corresponding label into it to allow everyone whose on the discord server know what the issue is! You must use the following labels:<br>
+- <b>frontend</b> : stuff related to...well the front-end<br>
+- <b>backend</b> : same as above but with the back-end<br>
+- <b>documentation</b> : any issue related to the design of the system, UI / UX, readme, etc.<br>
+- <b> wishlist </b> : anything that does not enters in the above categories that you think that is something that our amazing project should have!
+
+<h2> Pull Requests </h2>
+We all want to create some pull requests that get merged, but before you start working on it, please attach to this rules!
+<br>
+1) Make the name descritive <br>
+2) Prove a summary of the files changed on the description of the PR! <br>
+3) Provide constructive feedback where it applies. <br>
+4) If it does not get approved please don't get mad, it's a great learning experience and everyone is welcome to contribute! Read the feedback and keep trying! :)
+
+<h1 align = "center"> Documentation </h1>
+<p align = "center"><img width = "30%" height = "30%" src = "http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/3f4734bb2c3ce0f.png"/></p>
+<h2> System Design </h2>
+<p align = "center"><img src = "https://media.discordapp.net/attachments/889598080771584020/889930380981973023/unknown.png"/></p>
+
+<h2> UI Design </h2>
+<h5 align = "center">Category List</h5>
+<p align = "center"> <img src = "https://i.imgur.com/r0j7fZm.png"/> </p>
+<h5 align = "center">Create a new category</h5>
+<p align = "center"> <img src = "https://i.imgur.com/yQ23JkE.png"/> </p>
+<h5 align = "center">Entry List</h5>
+<p align = "center"> <img src = "https://i.imgur.com/P2JMKNr.png"/> </p>
+<h5 align = "center">Create a new Entry</h5>
+<p align = "center"> <img src = "https://i.imgur.com/QtWv4NT.png"/> </p>
+<h5 align = "center">Entry Details</h5>
+<p align = "center"> <img src = "https://i.imgur.com/oWxK29i.png"/> </p>
+
+
+
+<h1> Default React Stuff </h1>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
