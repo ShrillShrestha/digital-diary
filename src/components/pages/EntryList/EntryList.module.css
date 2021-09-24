@@ -31,10 +31,20 @@
 }
 
 .card_div {
+  display: flex;
   height: 90%;
+  flex-direction: column;
+  align-items: center;
   overflow-y: scroll;
 }
 .entry_card {
-  padding: 1rem 2rem;
-  margin: 1rem 2rem;
+  width: 95% !important;
+  margin-top: 1rem;
+}
+
+.truncate{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
