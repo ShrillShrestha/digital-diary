@@ -10,60 +10,14 @@
 .sub_div{
   width: 70%;
   height: 65%;
-  background-color: grey;
+  background-color:white;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid;
 }
 
-.cat_form{
-  width: 100%;
-  padding: 2rem;
-  max-height: 100%;
-}
-
-.title_div{
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
-  height: 10%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: x-large;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  background-color: #F8F0DF;
-}
-
-.card_cover{
-  display: flex;
-  height: 90%;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: scroll;
-}
-
-.card_ele{
-  width: 95% !important;
-  display: flex;
-  flex-direction: row !important;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.img_len{
-  object-fit: cover;
-  width:200px;
-  height:200px;
-}
-
-.edit_icon { 
-  margin-right: 1rem;
-  cursor: pointer;
-}
-.footer_icons {
-  display: flex;
-  justify-content: flex-end;
+.err{
+  font-size: xx-large;
 }

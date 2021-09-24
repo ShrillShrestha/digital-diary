@@ -5,7 +5,9 @@ const HomePage = () => {
   return (
     <div className={styles.main_div}>
       <div className={styles.sub_div}>
-        Error 404: Page Not Found!
+        <div className = {styles.err}>
+          Error 404: Page Not Found!
+        </div>
       </div>
     </div>
   );
